@@ -27,7 +27,7 @@ class Model(nn.Module):
         self.optimizer.step()
         total_loss += loss.step()
         self.epoch_loss_train[epoch].append(loss.item())
-        print(f"{epoch + 1}/{epochs} epoch : /nLoss {loss.step():.2f}\tAverage Loss : {total_loss/(epoch+1):.2f}")
+        print(f"{epoch + 1}/{epochs} epoch : /nLoss {loss.step():.2f} .... Average Loss : {total_loss/(epoch+1):.2f}")
         print("-" * 40)
         
       if val_loader:
