@@ -12,9 +12,10 @@ class Model(nn.Module):
     self.epoch_loss_val = dict()
 
 
-  def train(self, train_loader, val_loader = None, epochs = 10):
+  def train(self, train_loader, val_loader = None, epochs = 10, loss_function=None):
     for epoch in range(epochs): 
       self.model.train()
+      self.loss_function = loss_function
       total_loss = 0
       self.epoch_loss_train[epoch] = []
 
